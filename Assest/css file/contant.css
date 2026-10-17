@@ -1,0 +1,475 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* ---------- header ---------- */
+header {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px 20px;
+    padding: 15px 20px;          /* side padding so the header never touches the screen edge */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.logoname {
+    margin: 0;
+    font-size: medium;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    font-weight: lighter;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .phonecall {
+    margin: 0;
+}
+
+.quote {
+    background-color: #d9a441;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* ---------- top section ---------- */
+.topdiv {
+    width: 100%;
+    border: 2px solid black;
+    background-color: #233846;
+    padding: 50px 0;
+}
+
+.sc {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #5a7180;
+    margin: 20px;
+}
+
+.par {
+    margin: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 40px);
+    color: #fff;
+}
+
+/* ---------- Contact ---------- */
+.contact2 {
+    padding: 50px;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px 60px;               /* was a fixed 450px gap, which pushed the form off screen */
+}
+
+.contactdetails {
+    flex: 1 1 320px;
+    width: auto;
+    max-width: 700px;
+    min-width: 0;
+}
+
+.contactdetails > h6 {
+    color: #5a7180;
+}
+
+.phone > p,
+.mail > p,
+.address > p,
+.whatsapp > p {
+    margin-top: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;      /* long email / address never push the page wider */
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 3px solid #687f8e;
+}
+
+.phone,
+.mail,
+.address,
+.whatsapp {
+    display: flex;
+    gap: 20px;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    margin-left: 5px;
+}
+
+.whatsapp > button {
+    background-color: rgb(56, 122, 56);
+    margin-top: 10px;
+    height: 35px;
+    width: 120px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.Enquiry {
+    flex: 1 1 320px;
+    min-width: 0;
+    max-width: 560px;
+    color: #5d6871;
+}
+
+.Enquiry > h4 {
+    font-weight: lighter;
+}
+
+input[type="file"] {
+    width: 100%;
+    max-width: 520px;
+    height: 35px;
+    margin-bottom: 12px;
+    border: none;
+    font-family: "Courier New", monospace;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 520px;
+    height: 35px;
+    margin-bottom: 12px;
+    border: 2px solid #798a97;
+    font-family: "Courier New", monospace;
+}
+
+.Enquiry > div {
+    display: flex;
+    gap: 10px;
+    max-width: 520px;
+}
+
+input[type="number"],
+input[type="email"] {
+    flex: 1 1 0;
+    width: 100%;
+    max-width: 250px;
+    min-width: 0;
+    height: 35px;
+    margin-bottom: 12px;
+    border: 2px solid #798a97;
+    font-family: "Courier New", monospace;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: 95px;
+    border: 2px solid #798a97;
+    margin-bottom: 12px;
+    font-family: "Courier New", monospace;
+}
+
+.Enquiry > button {
+    background-color: #d9a441;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*------------------- footer-------------------------- */
+footer {
+    background-color: #D4993A;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 40px calc(30px + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 260px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.foot-name {
+    margin: 0;
+    font-size: medium;
+}
+
+.foot-exp {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+
+.page,
+.industries,
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 1 200px;
+    min-width: 0;
+    font-weight: lighter;
+    padding: 0;
+    overflow-wrap: anywhere;
+}
+
+.page h4,
+.industries h4,
+.contact h4,
+.industries p,
+.contact p {
+    margin: 0;
+}
+
+
+/* TABLET  */
+@media (min-width: 641px) and (max-width: 1100px) {
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 20px;
+        padding: 30px 25px calc(30px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .footer-left {
+        grid-column: 1 / -1;
+    }
+
+    .page,
+    .industries,
+    .contact {
+        width: 100%;
+        flex: none;
+    }
+}
+
+
+/* TABLET  */
+@media (max-width: 900px) {
+    .contact2 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 25px;
+        gap: 30px;
+        max-width: 100%;
+    }
+
+    .contactdetails,
+    .Enquiry {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    input[type="file"],
+    input[type="text"],
+    textarea,
+    .Enquiry > div {
+        max-width: 100%;
+    }
+}
+
+
+/* PHONE */
+@media (max-width: 640px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 8px;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .header-left {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 26px;
+        border-width: 2px;
+    }
+
+    .logoname {
+        font-size: 12px;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header .phonecall {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .quote {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+        font-size: 14px;
+    }
+
+    .topdiv {
+        padding: 30px 0;
+    }
+
+    .sc {
+        margin: 12px 20px;
+    }
+
+    .contact2 {
+        padding: 30px 16px;
+        gap: 25px;
+    }
+
+    .phone,
+    .mail,
+    .address,
+    .whatsapp {
+        gap: 14px;
+        margin-left: 0;
+    }
+
+    .Enquiry > div {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    input[type="number"],
+    input[type="email"] {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+
+    .Enquiry > button {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 25px 20px calc(25px + env(safe-area-inset-bottom, 0px));
+        gap: 25px;
+    }
+
+    .footer-left,
+    .page,
+    .industries,
+    .contact {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+
+/*  FOLDED PHONE */
+@media (max-width: 400px) {
+    .logo {
+        width: 28px;
+        height: 22px;
+    }
+
+    .logoname {
+        font-size: 10px;
+    }
+
+    header .phonecall {
+        font-size: 10px;
+    }
+
+    .quote {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .contact2 {
+        padding: 25px 12px;
+    }
+
+    footer {
+        padding: 25px 15px calc(25px + env(safe-area-inset-bottom, 0px));
+    }
+}

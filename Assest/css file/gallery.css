@@ -1,0 +1,494 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* ---------- header ---------- */
+header {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px 20px;
+    padding: 15px 20px;          /* side padding so the header never touches the screen edge */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.logoname {
+    margin: 0;
+    font-size: medium;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    font-weight: lighter;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .phonecall {
+    margin: 0;
+}
+
+.header-right>a {
+    background-color: #d9a441;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* ---------- top section ---------- */
+.topdiv {
+    width: 100%;
+    border: 2px solid black;
+    background-color: #233846;
+    padding: 50px 0;
+}
+
+.sc {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #5a7180;
+    margin: 20px;
+}
+
+.par {
+    margin: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 40px);
+    color: #fff;
+}
+
+/* ------------ navpath ------------- */
+.navpath {
+    margin: 20px 40px 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navpath > a {
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid black;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.navpath > a:hover,
+.navpath > a::selection {
+    background: #d9a441;
+}
+
+/* ------------ cards ------------- */
+.cardphoto {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: rgb(220, 217, 217);
+    height: auto;                 /* was fixed 850px, which cut cards off */
+}
+
+.cardsphoto1,
+.cardsphoto2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0 20px 30px;
+}
+
+.shaftComp,
+.Flange,
+.Housingbracket,
+.bushing,
+.structuralfitting,
+.customfixture {
+    background: #EEEFF1;
+    flex: 0 1 300px;
+    width: 300px;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.team-photo {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.team-role {
+    background: #D8DCDF;
+    padding: 10px 14px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #111418;
+}
+
+.team-info {
+    padding: 10px 14px 28px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: #4A5560;
+}
+
+.view {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.view > button {
+    height: 3rem;
+    width: min(15rem, 100%);
+    background-color: white;
+    align-items: center;
+}
+
+.view > button:hover {
+    background-color: #d9a441;
+    border: none;
+}
+
+/* --------------------Contant--------------------- */
+.cta {
+    margin-top: 15px;
+    padding: 52px 24px;
+}
+
+.cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #111418;
+    margin: 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #12181D;
+    color: #ffffff;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 16px 64px;
+}
+
+/*------------------- footer-------------------------- */
+footer {
+    background: #D69A3C;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 40px calc(30px + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 260px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.foot-name {
+    margin: 0;
+    font-size: medium;
+}
+
+.foot-exp {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+
+.page,
+.industries,
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 1 200px;
+    min-width: 0;
+    font-weight: lighter;
+    overflow-wrap: anywhere;
+}
+
+.page h4,
+.industries h4,
+.contact h4,
+.industries p,
+.contact p {
+    margin: 0;
+}
+
+
+/* TABLET  */
+@media (min-width: 641px) and (max-width: 1100px) {
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 20px;
+        padding: 30px 25px calc(30px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .footer-left {
+        grid-column: 1 / -1;
+    }
+
+    .page,
+    .industries,
+    .contact {
+        width: 100%;
+        flex: none;
+    }
+}
+
+
+/* TABLET */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .navpath {
+        margin: 20px 20px 10px 20px;
+    }
+
+    .team-photo {
+        height: 200px;
+    }
+
+    .team-info {
+        padding-bottom: 20px;
+    }
+}
+
+
+/* PHONE */
+@media (max-width: 640px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 8px;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .header-left {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 26px;
+        border-width: 2px;
+    }
+
+    .logoname {
+        font-size: 12px;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header .phonecall {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .quote {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+        font-size: 14px;
+    }
+
+    .topdiv {
+        padding: 30px 0;
+    }
+
+    .sc {
+        margin: 12px 20px;
+    }
+
+    .navpath {
+        margin: 16px 12px 10px;
+        gap: 10px;
+    }
+
+    .navpath > a {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 10px 16px;
+    }
+
+
+    .cardphoto {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .cardsphoto1,
+    .cardsphoto2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 12px 20px;
+    }
+
+    .shaftComp,
+    .Flange,
+    .Housingbracket,
+    .bushing,
+    .structuralfitting,
+    .customfixture {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .team-photo {
+        height: 220px;
+    }
+
+    .view {
+        padding: 0 12px;
+    }
+
+    .view > button {
+        width: 100%;
+    }
+
+    .cta {
+        padding: 36px 12px;
+    }
+
+    .cta-inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .cta-btn {
+        display: block;
+        width: 100%;
+        padding: 16px 24px;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 25px 20px calc(25px + env(safe-area-inset-bottom, 0px));
+        gap: 25px;
+    }
+
+    .footer-left,
+    .page,
+    .industries,
+    .contact {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+
+/* \FOLDED  */
+@media (max-width: 400px) {
+    .logo {
+        width: 28px;
+        height: 22px;
+    }
+
+    .logoname {
+        font-size: 10px;
+    }
+
+    header .phonecall {
+        font-size: 10px;
+    }
+
+    .quote {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .cta-title {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 25px 15px calc(25px + env(safe-area-inset-bottom, 0px));
+    }
+}

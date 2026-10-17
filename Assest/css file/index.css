@@ -1,0 +1,541 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+button:hover { cursor: pointer; }
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+/*-------------------header-------------------------*/
+header {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px 20px;
+    padding: 15px 20px;           /* side padding added so the header never touches the screen edge */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.logoname {
+    margin: 0;
+    font-size: medium;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    font-weight: lighter;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .phonecall {
+    margin: 0;
+}
+
+.header-right>a {
+    background-color: #d9a441;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+/*-------------------bigmach-------------------------*/
+.bigmach{
+    background-color: rgb(221, 219, 219);
+    margin-top: 40px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.imginf{
+    flex: 1 1 0;
+    min-width: 0;
+}
+.mainpr{
+    text-align: left;
+    font-size: clamp(1.05rem, 0.5rem + 1.2vw, 1.25rem);
+}
+.bigimg{
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 750px;
+    height: auto;
+    aspect-ratio: 15 / 8;
+    object-fit: cover;
+    border: 5px solid black;
+}
+.lilinfor{
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);
+    margin: 16px 0 24px;
+}
+.inquery-2{
+    height: 50px;
+    width: 150px;
+    margin: 0 10px 10px 0;
+    border: 2px solid black;
+}
+.inquery-2{ background-color: #d9a441; }
+button:hover{
+    border: 1px solid rgb(221, 219, 219);
+}
+
+.imginf>a{
+    display: inline-block;
+    padding: 14px 25px;
+    font-weight: lighter;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+
+/*---------------------section--------------------------*/
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+}
+.section1, .section2, .section3, .section4{
+    flex: 0 0 25%;
+    min-width: 0;
+    border: 2px solid rgb(221, 219, 219);
+    min-height: 250px;
+}
+.sect-1, .sect-2, .sect-3, .sect-4{
+    margin: 20px 20px 20px clamp(16px, 3vw, 50px);
+    font-size: clamp(1.05rem, 0.6rem + 1vw, 1.375rem);
+}
+
+
+/*----------------inforsect--------------------*/
+.inforsect{
+    line-height: 1.6;
+    padding: 30px 40px;
+}
+.infor{
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+.inforsect p{ margin-top: 0; }
+
+
+/*---------------------Serving--------------------------*/
+.serving{
+    background-color: #233746;
+}
+.ser-head{
+    border: 2px solid #364c5c;
+    padding: 30px 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 30px;
+}
+.ser-tittle{ margin: 0; }
+.ser-comp{
+    margin: 0;
+    color: white;
+}
+.ser-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ser1, .ser2, .ser3, .ser4{
+    flex: 0 0 25%;
+    min-width: 0;
+    border: 2px solid #364c5c;
+    min-height: 250px;
+    color: white;
+}
+.ser-1, .ser-2, .ser-3, .ser-4{
+    margin: 20px 20px 20px clamp(16px, 3vw, 50px);
+    font-size: clamp(1.05rem, 0.6rem + 1vw, 1.375rem);
+}
+
+
+/*--------------------request--------------------*/
+.request{
+    padding: 50px 40px;
+    font-family: Roboto, sans-serif;
+}
+.request h2{ margin-top: 0; }
+.req-actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.whtbtn{
+    height: 50px;
+    width: 150px;
+    border: 2px solid black;
+}
+.request>a{
+    display: inline-block;
+    padding: 14px 25px;
+    font-weight: lighter;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+/* enquiry form */
+.enquiry-form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    max-width: 800px;
+    margin-top: 30px;
+}
+.form-field{
+    flex: 0 0 calc(50% - 10px);   /* 2 columns (half of the 20px gap) */
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: bold;
+}
+.form-full{ flex: 0 0 100%; }
+.enquiry-form input,
+.enquiry-form textarea{
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    font-size: 16px;
+    font-weight: normal;
+    border: 2px solid black;
+    background: #fff;
+}
+.enquiry-form input:focus,
+.enquiry-form textarea:focus{
+    outline: 3px solid #233746;
+    outline-offset: 1px;
+}
+
+
+/*------------------- footer-------------------------- */
+footer {
+    background-color: #D4993A;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 40px calc(30px + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 260px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.foot-name {
+    margin: 0;
+    font-size: medium;
+}
+
+.foot-exp {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+
+.page,
+.industries,
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 1 200px;
+    min-width: 0;
+    font-weight: lighter;
+    overflow-wrap: anywhere;
+}
+
+.page h4,
+.industries h4,
+.contact h4,
+.industries p,
+.contact p {
+    margin: 0;
+}
+
+
+/* TABLET  */
+@media (min-width: 641px) and (max-width: 1100px) {
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 20px;
+        padding: 30px 25px calc(30px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .footer-left {
+        grid-column: 1 / -1;
+    }
+
+    .page,
+    .industries,
+    .contact {
+        width: 100%;
+        flex: none;
+    }
+}
+
+
+/* TABLET  */
+@media (max-width: 1024px) {
+    /* big machine block: image goes under the text */
+    .bigmach {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .imginf,
+    .bigimg {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section1, .section2, .section3, .section4,
+    .ser1, .ser2, .ser3, .ser4 {
+        flex: 0 0 50%;
+        min-height: 200px;
+    }
+
+    .inforsect,
+    .ser-head {
+        padding: 30px 25px;
+    }
+
+    .request {
+        padding: 40px 25px;
+    }
+}
+
+
+/* PHONE */
+@media (max-width: 640px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 8px;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .header-left {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 26px;
+        border-width: 2px;
+    }
+
+    .logoname {
+        font-size: 12px;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header .phonecall {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .quote {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+        font-size: 14px;
+    }
+
+    .bigmach {
+        margin-top: 24px;
+        padding: 24px 16px;
+        gap: 24px;
+    }
+
+    .bigimg {
+        border-width: 3px;
+    }
+
+    .imginf > a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .inquery-2 {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .section1, .section2, .section3, .section4,
+    .ser1, .ser2, .ser3, .ser4 {
+        flex: 0 0 100%;
+        min-height: 0;
+        padding-bottom: 8px;
+    }
+
+    .inforsect,
+    .ser-head {
+        padding: 24px 16px;
+    }
+
+    .ser-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .request {
+        padding: 30px 16px;
+    }
+
+    .request > a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .req-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .whtbtn {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    
+    .enquiry-form {
+        gap: 14px;
+    }
+
+    .form-field {
+        flex: 0 0 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 25px 20px calc(25px + env(safe-area-inset-bottom, 0px));
+        gap: 25px;
+    }
+
+    .footer-left,
+    .page,
+    .industries,
+    .contact {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+
+/* -FOLDED PHONE */
+@media (max-width: 400px) {
+    .logo {
+        width: 28px;
+        height: 22px;
+    }
+
+    .logoname {
+        font-size: 10px;
+    }
+
+    header .phonecall {
+        font-size: 10px;
+    }
+
+    .quote {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .bigmach {
+        padding: 20px 12px;
+    }
+
+    .inquery-2,
+    .whtbtn {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    footer {
+        padding: 25px 15px calc(25px + env(safe-area-inset-bottom, 0px));
+    }
+}

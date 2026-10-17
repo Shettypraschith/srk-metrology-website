@@ -1,0 +1,602 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* ---------- header ---------- */
+header {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px 20px;
+    padding: 15px 20px;          /* side padding so the header never touches the screen edge */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.logoname {
+    margin: 0;
+    font-size: medium;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    font-weight: lighter;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .phonecall {
+    margin: 0;
+}
+
+.header-right>a {
+    background-color: #d9a441;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* ---------- top section ---------- */
+.topdiv {
+    width: 100%;
+    border: 2px solid black;
+    background-color: #233846;
+    padding: 50px 0;
+}
+
+.sc {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #5a7180;
+    margin: 20px;
+}
+
+.par {
+    margin: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 40px);
+    color: #fff;
+}
+
+/* ---------- machine sections ---------- */
+.machine {
+    width: 100%;
+}
+
+/* m1 and m3: image on one side, text on the other */
+.m1,
+.m3 {
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+/* m2 and m4: same, but reversed with a grey background */
+.m2,
+.m4 {
+    width: 100%;
+    padding: 25px 0;
+    background-color: #6460603a;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+/* both children (image + text) may shrink instead of overflowing */
+.m1 > *,
+.m2 > *,
+.m3 > *,
+.m4 > * {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* number (01, 02 ...) */
+.num1, .num2, .num3, .num4 {
+    font-weight: lighter;
+    font-size: medium;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    font-family: 'Courier New', monospace;
+}
+
+/* machine name */
+.name1, .name2, .name3, .name4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 10px 0 5px 46px;
+}
+
+/* description */
+.infor1, .infor2, .infor3, .infor4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    width: 500px;
+    max-width: 100%;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0 5px 46px;
+    color: #6b7a86;
+    letter-spacing: 0.01em;
+}
+
+/* measurement line */
+.measurment1, .measurment2, .measurment3, .measurment4 {
+    margin-left: 46px;
+    margin-bottom: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: #5a6b78;
+}
+
+/* ---------- support section ---------- */
+.support {
+    width: 100%;
+    padding-bottom: 40px;
+    background-color: aliceblue;
+}
+
+.supportdiv {
+    margin: 0 30px;
+    padding-top: 50px;
+    border-bottom: 2px solid #5a6b78;
+}
+
+.supportdiv > h4 {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: #5a6b78;
+}
+
+/* the four items sit in one row */
+.supportdiv2 {
+    display: flex;
+    margin: 0 30px;
+}
+
+.surface,
+.outsource,
+.cleaning,
+.custom {
+    flex: 1;
+    min-width: 0;
+    height: 70px;
+    padding-left: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: #5a6b78;
+    border-right: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+/* last item has no line on the right */
+.custom {
+    border-right: none;
+}
+
+/* ---------- drawing / request section ---------- */
+.request {
+    display: flex;
+    flex-wrap: nowrap;            /* desktop: everything stays on one row, as in your original */
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 40px;
+    font-family: Roboto, sans-serif;
+}
+
+.request > a {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 14px 25px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.whtbtn {
+    margin-left: 20px;
+    height: 50px;
+    width: 150px;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/*------------------- footer-------------------------- */
+footer {
+    background-color: #D4993A;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 40px calc(30px + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 260px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.foot-name {
+    margin: 0;
+    font-size: medium;
+}
+
+.foot-exp {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+
+.page,
+.industries,
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 1 200px;
+    min-width: 0;
+    font-weight: lighter;
+    overflow-wrap: anywhere;
+}
+
+.page h4,
+.industries h4,
+.contact h4,
+.industries p,
+.contact p {
+    margin: 0;
+}
+
+
+/* TABLET  */
+@media (min-width: 641px) and (max-width: 1100px) {
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 20px;
+        padding: 30px 25px calc(30px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .footer-left {
+        grid-column: 1 / -1;
+    }
+
+    .page,
+    .industries,
+    .contact {
+        width: 100%;
+        flex: none;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+    .m1,
+    .m2,
+    .m3,
+    .m4 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .m1 > *,
+    .m2 > *,
+    .m3 > *,
+    .m4 > * {
+        width: 100%;
+    }
+
+    .num1, .num2, .num3, .num4,
+    .name1, .name2, .name3, .name4,
+    .infor1, .infor2, .infor3, .infor4,
+    .measurment1, .measurment2, .measurment3, .measurment4 {
+        margin-left: 0;
+    }
+
+    .infor1, .infor2, .infor3, .infor4 {
+        width: 100%;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .supportdiv,
+    .supportdiv2 {
+        margin: 0 20px;
+    }
+
+    .supportdiv2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .surface,
+    .outsource {
+        border-bottom: 2px solid black;
+    }
+
+    .outsource,
+    .custom {
+        border-right: none;
+    }
+
+    .request {
+        padding: 40px 25px;
+    }
+}
+
+
+/* TABLET  */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .request {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 20px;
+    }
+
+    .request > h1,
+    .request > h2,
+    .request > h3,
+    .request > p {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+
+    .request > a,
+    .whtbtn {
+        margin-left: 0;
+    }
+}
+
+
+/* =========================================================
+   PHONE  (up to 640px)
+   ========================================================= */
+@media (max-width: 640px) {
+    /* header: logo + call + quote on ONE line, nav links underneath */
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 8px;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .header-left {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 26px;
+        border-width: 2px;
+    }
+
+    .logoname {
+        font-size: 12px;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header .phonecall {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .quote {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+        font-size: 14px;
+    }
+
+    .topdiv {
+        padding: 30px 0;
+    }
+
+    .sc {
+        margin: 12px 20px;
+    }
+
+    .m1,
+    .m2,
+    .m3,
+    .m4 {
+        padding: 20px 14px;
+    }
+
+    .name1, .name2, .name3, .name4 {
+        font-size: 24px;
+    }
+
+    .infor1, .infor2, .infor3, .infor4 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    /* support items: one per row */
+    .supportdiv,
+    .supportdiv2 {
+        margin: 0 12px;
+    }
+
+    .supportdiv {
+        padding-top: 30px;
+    }
+
+    .supportdiv2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .surface,
+    .outsource,
+    .cleaning,
+    .custom {
+        height: 56px;
+        font-size: 14px;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+
+    .custom {
+        border-bottom: none;
+    }
+
+    
+    .request {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 30px 16px;
+    }
+
+    .request > a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .whtbtn {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 25px 20px calc(25px + env(safe-area-inset-bottom, 0px));
+        gap: 25px;
+    }
+
+    .footer-left,
+    .page,
+    .industries,
+    .contact {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+
+/* FOLDED PHONE */
+@media (max-width: 400px) {
+    .logo {
+        width: 28px;
+        height: 22px;
+    }
+
+    .logoname {
+        font-size: 10px;
+    }
+
+    header .phonecall {
+        font-size: 10px;
+    }
+
+    .quote {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .name1, .name2, .name3, .name4 {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 25px 15px calc(25px + env(safe-area-inset-bottom, 0px));
+    }
+}
