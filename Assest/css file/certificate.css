@@ -1,0 +1,612 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* ---------- header ---------- */
+header {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px 20px;
+    padding: 15px 20px;          /* side padding so the header never touches the screen edge */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.logoname {
+    margin: 0;
+    font-size: medium;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    font-weight: lighter;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .phonecall {
+    margin: 0;
+}
+
+.header-right > a {
+    background-color: #d9a441;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* ---------- top section ---------- */
+.topdiv {
+    width: 100%;
+    border: 2px solid black;
+    background-color: #233846;
+    padding: 50px 0;
+}
+
+.sc {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #5a7180;
+    margin: 20px;
+}
+
+.par {
+    margin: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 40px);
+    color: #fff;
+}
+
+/* ---------- Team ---------- */
+.team-wrap {
+    padding: 48px 24px;
+    margin: 0 auto;
+}
+
+.team-eyebrow {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #6B7F90;
+    margin: 0 0 8px;
+}
+
+.team-title {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #111418;
+    margin: 0 0 28px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+
+.team-card {
+    background: #EEEFF1;
+    flex: 0 1 300px;
+    width: 300px;
+    min-width: 0;
+    max-width: 100%;
+    justify-content: space-evenly;
+}
+
+.team-photo {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.team-role {
+    background: #D8DCDF;
+    padding: 10px 14px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #111418;
+}
+
+.team-info {
+    padding: 10px 14px 28px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+    color: #4A5560;
+}
+
+/* ---------- process ---------- */
+.process {
+    max-width: 1600px;
+    background-color: #EEEFF1;
+    margin: 5px 50px;
+    padding: 50px 50px 10px 50px;
+}
+
+.name {
+    font-family: "Courier New", monospace;
+}
+
+.eyebrow {
+    margin-top: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(22px, 3vw, 30px);
+}
+
+/* the old .line was placed with top: 1335px, which only works at one screen size.
+   The dashed line is now drawn by .lineprocess::before, so .line is hidden. */
+.line {
+    display: none;
+}
+
+.lineprocess {
+    padding-top: 90px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+/* dashed line from the first circle's centre to the last circle's centre */
+.lineprocess::before {
+    content: "";
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: calc(90px + 37.5px - 2px);   /* middle of the 75px circles */
+    border-top: 2px dashed #335569;
+}
+
+/* four equal steps; circles sit on top of the line */
+.lineprocess > * {
+    flex: 1 1 0;
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 8px;
+}
+
+.cricle {
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    background-color: #335569;
+    margin-bottom: 20px;
+}
+
+.step4 {
+    background-color: #d9a441;
+}
+
+/* ---------- sample report ---------- */
+.samplereport {
+    max-width: 1600px;
+    margin: 5px 50px;
+    padding: 50px 50px 10px 50px;
+}
+
+.heading > p {
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    color: #335569;
+}
+
+.heading > h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+}
+
+.report {
+    display: flex;
+    gap: 70px;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+}
+
+.report > img {
+    max-height: 500px;
+    max-width: min(600px, 100%);
+    min-width: 0;
+}
+
+.report > p {
+    font-size: clamp(18px, 2.2vw, 24px);
+    font-weight: 300;
+    color: #335569;
+    line-height: 1.5;
+    min-width: 0;
+}
+
+/* --------------------Contant--------------------- */
+.cta {
+    padding: 52px 24px;
+}
+
+.cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #111418;
+    margin: 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #12181D;
+    color: #ffffff;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 16px 64px;
+}
+
+/*------------------- footer-------------------------- */
+footer {
+    background-color: #D4993A;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 40px calc(30px + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 260px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.foot-name {
+    margin: 0;
+    font-size: medium;
+}
+
+.foot-exp {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+
+.page,
+.industries,
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 1 200px;
+    min-width: 0;
+    font-weight: lighter;
+    overflow-wrap: anywhere;
+}
+
+.page h4,
+.industries h4,
+.contact h4,
+.industries p,
+.contact p {
+    margin: 0;
+}
+
+
+/* TABLET */
+@media (min-width: 641px) and (max-width: 1100px) {
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 20px;
+        padding: 30px 25px calc(30px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .footer-left {
+        grid-column: 1 / -1;
+    }
+
+    .page,
+    .industries,
+    .contact {
+        width: 100%;
+        flex: none;
+    }
+}
+
+
+/* TABLET  */
+@media (max-width: 1024px) {
+    .team-photo {
+        height: 380px;
+    }
+
+    .process,
+    .samplereport {
+        margin: 5px 20px;
+        padding: 40px 25px 10px;
+    }
+
+    /* report: image on top, text underneath */
+    .report {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .report > img {
+        max-width: 100%;
+    }
+}
+
+
+/* PHONE  */
+@media (max-width: 640px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 8px;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .header-left {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 26px;
+        border-width: 2px;
+    }
+
+    .logoname {
+        font-size: 12px;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header .phonecall {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .header-right > a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+        font-size: 14px;
+    }
+
+    .topdiv {
+        padding: 30px 0;
+    }
+
+    .sc {
+        margin: 12px 20px;
+    }
+
+    .team-wrap {
+        padding: 30px 12px;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .team-card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .team-photo {
+        height: 360px;
+    }
+
+    .process,
+    .samplereport {
+        margin: 5px 12px;
+        padding: 30px 16px 10px;
+    }
+
+    .lineprocess {
+        flex-direction: column;
+        gap: 28px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .lineprocess::before {
+        left: 28px;                      
+        right: auto;
+        top: 48px;
+        bottom: 58px;
+        border-top: none;
+        border-left: 2px dashed #335569;
+    }
+
+    .lineprocess > * {
+        flex: 0 0 auto;
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        column-gap: 16px;
+        align-items: center;
+        align-content: center;
+        text-align: left;
+        padding: 0;
+    }
+
+    .lineprocess > * > .cricle {
+        grid-column: 1;
+        grid-row: 1 / span 4;
+        width: 56px;
+        height: 56px;
+        margin-bottom: 0;
+    }
+
+    .lineprocess > * > :not(.cricle) {
+        grid-column: 2;
+        margin: 0;
+    }
+
+    .report > p {
+        font-size: 18px;
+    }
+
+    .cta {
+        padding: 36px 12px;
+    }
+
+    .cta-inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .cta-btn {
+        display: block;
+        width: 100%;
+        padding: 16px 24px;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 25px 20px calc(25px + env(safe-area-inset-bottom, 0px));
+        gap: 25px;
+    }
+
+    .footer-left,
+    .page,
+    .industries,
+    .contact {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+
+/* FOLDED PHONE */
+@media (max-width: 400px) {
+    .logo {
+        width: 28px;
+        height: 22px;
+    }
+
+    .logoname {
+        font-size: 10px;
+    }
+
+    header .phonecall {
+        font-size: 10px;
+    }
+
+    .header-right > a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .cta-title {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 25px 15px calc(25px + env(safe-area-inset-bottom, 0px));
+    }
+}

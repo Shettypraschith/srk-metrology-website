@@ -1,0 +1,476 @@
+/* whole body */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/*  HEADER  */
+header {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px 20px;
+    padding: 15px 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.logoname {
+    margin: 0;
+    font-size: medium;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    font-weight: lighter;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .phonecall {
+    margin: 12px;
+}
+
+.header-right > a {
+    background-color: #d9a441;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* topdiv */
+.topdiv {
+    width: 100%;
+    border: 2px solid black;
+    background-color: #233846;
+    padding: 50px 0;
+}
+
+.mi {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #5a7180;
+    margin: 20px;
+}
+
+.par {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 40px);
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* table */
+.machheading,
+.tableheading {
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+}
+
+.table1,
+.table2 {
+    overflow-x: auto;
+}
+
+.table2 {
+    margin-top: 20px;
+}
+
+.table1 table,
+.table2 table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.table1 th,
+.table1 td,
+.table2 th,
+.table2 td {
+    padding: 20px;
+    text-align: left;
+}
+
+.table1 th,
+.table2 th {
+    background: #35566b;
+    color: #fff;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.table1 tbody tr:nth-child(even) td,
+.table2 tbody tr:nth-child(even) td {
+    background: #eff0f3;
+}
+
+/* card */
+.highlights {
+    margin-top: 50px;
+}
+
+.highlights > h5 {
+    font-family: "Courier New", Courier, monospace;
+    padding-left: 30px;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+}
+
+.highlights > h2 {
+    font-family: "Roboto", sans-serif;
+    padding-left: 30px;
+    font-weight: lighter;
+}
+
+.machsection {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+
+.CNCTurning,
+.CNCMill,
+.CMMInspection {
+    min-width: 0;
+    padding: 30px 20px;
+    background-color: rgb(238, 238, 238);
+}
+
+.CNCTurning > div,
+.CNCMill > div,
+.CMMInspection > div {
+    height: 30px;
+    width: 40px;
+    border: 2px solid #D4993A;
+}
+
+.CNCTurning > h4,
+.CNCMill > h4,
+.CMMInspection > h4 {
+    font-size: 22px;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+.CNCTurning > p,
+.CNCTurning > h5,
+.CNCMill > p,
+.CNCMill > h5,
+.CMMInspection > p,
+.CMMInspection > h5 {
+    color: rgb(82, 80, 80);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #D4993A;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 40px calc(30px + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 260px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: 40px;
+    border: 3px solid black;
+}
+
+.foot-name {
+    margin: 0;
+    font-size: medium;
+}
+
+.foot-exp {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+
+.page,
+.industries,
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 1 200px;
+    min-width: 0;
+    font-weight: lighter;
+    overflow-wrap: anywhere;
+}
+
+.page h4,
+.industries h4,
+.contact h4,
+.industries p,
+.contact p {
+    margin: 0;
+}
+
+/*  TABLET  */
+@media (min-width: 641px) and (max-width: 1100px) {
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 20px;
+        padding: 30px 25px calc(30px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .footer-left {
+        grid-column: 1 / -1;
+    }
+
+    .page,
+    .industries,
+    .contact {
+        width: 100%;
+        flex: none;
+    }
+}
+
+/* TABLET  */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .table1 th,
+    .table1 td,
+    .table2 th,
+    .table2 td {
+        padding: 15px;
+    }
+
+    .highlights > h5,
+    .highlights > h2 {
+        padding-left: 20px;
+    }
+
+    .machsection {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+}
+
+/*  PHONE  */
+@media (max-width: 640px) {
+    body {
+        padding: 0 12px;
+    }
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 8px;
+        text-align: left;
+    }
+
+    .header-left {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 26px;
+        border-width: 2px;
+    }
+
+    .logoname {
+        font-size: 12px;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header .phonecall {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .header-right > a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+        font-size: 14px;
+    }
+
+    .topdiv {
+        padding: 30px 0;
+    }
+
+    .mi {
+        margin: 12px 20px;
+    }
+
+    .machheading,
+    .tableheading {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    .table1 th,
+    .table1 td,
+    .table2 th,
+    .table2 td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+    .table1 table,
+    .table2 table {
+        min-width: 460px; 
+    }
+
+    .highlights {
+        margin-top: 30px;
+    }
+
+    .highlights > h5,
+    .highlights > h2 {
+        padding-left: 12px;
+    }
+
+    .machsection {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0 12px;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 25px 20px calc(25px + env(safe-area-inset-bottom, 0px));
+        gap: 25px;
+    }
+
+    .footer-left,
+    .page,
+    .industries,
+    .contact {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+/*  FOLDED PHONE */
+@media (max-width: 400px) {
+    body {
+        padding: 0 8px;
+    }
+
+    .logo {
+        width: 28px;
+        height: 22px;
+    }
+
+    .logoname {
+        font-size: 10px;
+    }
+
+    header .phonecall {
+        font-size: 10px;
+    }
+
+    .header-right > a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .par {
+        padding: 0 12px;
+    }
+
+    .machsection {
+        padding: 0 8px;
+    }
+
+    .CNCTurning,
+    .CNCMill,
+    .CMMInspection {
+        padding: 20px 15px;
+    }
+
+    footer {
+        padding: 25px 15px calc(25px + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+@media (max-width: 360px) {
+    .foot-name {
+        font-size: 14px;
+    }
+}
